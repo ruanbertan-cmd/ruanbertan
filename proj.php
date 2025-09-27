@@ -1,4 +1,4 @@
 <?php
 
-print "Ola mundo!!";
-print "novo projeto";
+echo "Ola mundo!!";
+echo "novo projeto";
