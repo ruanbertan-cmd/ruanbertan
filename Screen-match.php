@@ -6,16 +6,17 @@ $nomeFilme = "O renascimento - Wolverine";
 $nomeFilme = "Documentario - David Goggins";
 $nomeFilme = "Se Beber Não Case";
 
-$anoLancamento = $argv[1] ?? 2025;
+$anoLancamento = 2025;
 $anoAtual = date("Y");
 
-$somaDeNotas = 9;
-$somaDeNotas += 6;
-$somaDeNotas += 8;
-$somaDeNotas += 7.5;
-$somaDeNotas += 5;
+$quantidadeDeNotas = $argc - 1;
+$somaDeNotas = 0;
 
-$notaFilme = $somaDeNotas / 5;
+for ($contador = 1; $contador < $argc; $contador++) {
+   $somaDeNotas += $argv[$contador];
+}
+
+$notaFilme = $somaDeNotas / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = $planoPrime || $anoLancamento < $anoAtual;
@@ -40,3 +41,8 @@ $genero = match ($nomeFilme) {
 };
 
 echo "Gênero: $genero\n";
+
+for ($i = 1; $i < 1; $i++) {
+   echo "Avaliação: $argv[$i]\n";
+   
+}
