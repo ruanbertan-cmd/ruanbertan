@@ -41,8 +41,3 @@ $genero = match ($nomeFilme) {
 };
 
 echo "Gênero: $genero\n";
-
-for ($i = 1; $i < 1; $i++) {
-   echo "Avaliação: $argv[$i]\n";
-   
-}
