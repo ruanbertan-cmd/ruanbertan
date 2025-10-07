@@ -10,10 +10,15 @@ $anoLancamento = 2025;
 $anoAtual = date("Y");
 
 $quantidadeDeNotas = $argc - 1;
-$somaDeNotas = 0;
+$notas = [];
 
 for ($contador = 1; $contador < $argc; $contador++) {
-   $somaDeNotas += $argv[$contador];
+   $notas[] = (float) $argv[$contador];
+}
+
+$somaDeNotas = 0
+for ($i = 0; $i < count($notas); $i++) {
+   $somaDeNotas += $notas[$i];
 }
 
 $notaFilme = $somaDeNotas / $quantidadeDeNotas;
@@ -41,3 +46,12 @@ $genero = match ($nomeFilme) {
 };
 
 echo "Gênero: $genero\n";
+
+$filme = [
+   "nome" = "O renascimento - Wolverine";
+   "ano" = 2021;
+   "nota" = 5.6;
+   "genero" = "Ação"
+] 
+
+echo $filme ["nome"]
