@@ -15,4 +15,7 @@ $alunosFaltantes = array_diff_key($notasBimetre1, $notasBimetre2);
 $nomesAlunos = array_keys($alunosFaltantes);
 $notasAlunos = array_values($alunosFaltantes);
 
-var_dump(array_combine($nomesAlunos, $notasAlunos));
+#var_dump(array_combine($nomesAlunos, $notasAlunos));
+
+$grupoNumeros = ['notas' => [1, 2, 3, 4, 5], 'faltantes' => $notasAlunos];
+var_dump($grupoNumeros);
